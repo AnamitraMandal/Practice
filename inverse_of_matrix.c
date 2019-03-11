@@ -1,3 +1,6 @@
+/* C program to find the inverse of a square matrix where the 2D matrix is given as 1D arrar*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 void cofac(int A[],int i, int j, int tmp[], int n)
@@ -86,21 +89,18 @@ int main()
 
   int k;
   int i;
- // printf("Enter the order of the Matrix : ");
- // scanf("%d", &k);
- k=2;
+ printf("Enter the order of the Matrix : ");
+ scanf("%d", &k);
+ 
 
   int* A=(int*)malloc((k*k)*sizeof(int));
-  A[0]=1;
-  A[1]=2;
-  A[3]=4;
-  A[2]=3;
-  float* invs=(float*)malloc((k*k)*sizeof(float));
-  printf("Enter the elements of %dX%d Matrix : \n", k, k);
- /* for (i = 0;i < k*k; i++)
+  
+ float* invs=(float*)malloc((k*k)*sizeof(float));
+ printf("Enter the elements of %dX%d Matrix : \n", k, k);
+ for (i = 0;i < k*k; i++)
     {
       scanf("%d", &A[i]);
-    }*/
+    }
   inv(A,invs,k);
   for(i=0;i<k;i++)
   {
